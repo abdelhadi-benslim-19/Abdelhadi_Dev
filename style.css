@@ -1,0 +1,370 @@
+/* Remove white space between the sections */
+section {
+    margin: 0;
+    padding: 0;
+  }
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Allow absolute positioning for child elements */
+  }
+  
+  .yin-yang {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to right, black 50%, white 50%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Set to 1 so it's above the text background */
+  }
+  
+  .white-half, .black-half {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .white-half {
+    bottom: 0;
+    right: 75px;
+    background-color: white;
+  }
+  
+  .black-half {
+    top: 0;
+    right: 75px;
+    background-color: black;
+  }
+  
+  /* Text Boxes */
+  .text-box {
+    width: 50%; /* Each box takes half the width */
+    height: 100vh; /* Full height of the hero section */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    position: relative; /* Relative positioning */
+    z-index: 0; /* Lower z-index to place behind the yin-yang */
+  }
+  
+  /* Text for Bug Bounty Hunting on the left */
+  .black-content {
+    background-color: white; /* White background */
+    color: black;
+    position: absolute; /* Make it absolute */
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 50%; /* Take half the width */
+    height: 100vh; /* Full height */
+    z-index: 0; /* Behind the yin-yang */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding-right: 100px; /* Add padding to create space from the yin-yang */
+  }
+  
+  .white-content {
+    background-color: black; /* Black background */
+    color: white;
+    position: absolute; /* Make it absolute */
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: 50%; /* Take half the width */
+    height: 100vh; /* Full height */
+    z-index: 0; /* Behind the yin-yang */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding-left: 100px; /* Add padding to create space from the yin-yang */
+  }
+  
+
+  /* About Me */
+  .about {
+    display: flex; /* Use flexbox for the entire section */
+    height: 100vh; /* Full height for the section */
+  }
+  
+  .about-content {
+    display: flex; /* Use flexbox for content layout */
+    width: 100%; /* Full width of the about section */
+  }
+  
+  .slideshow {
+    width: 50%; /* Left half for slideshow */
+    position: relative; /* Position for the slideshow */
+    background-color: black; /* Black background for the slideshow side */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center the slideshow */
+    justify-content: center; /* Horizontally center the slideshow */
+    height: 100%; /* Full height for the slideshow */
+  }
+  
+  
+  .slideshow img {
+    width: 100%; /* Full width of the slideshow container */
+    height: auto; /* Maintain aspect ratio */
+    display: none; /* Hide images by default */
+  }
+  
+  .slideshow img.active {
+    display: block; /* Show the active image */
+  }
+  
+  .about-text {
+    width: 50%; /* Right half for text */
+    padding: 40px 20px; /* Padding for top/bottom and left/right */
+    background-color: white; /* White background for the text side */
+    color: black; /* Text color */
+    text-align: left; /* Align text to the left */
+    display: flex; /* Use flexbox for text layout */
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center content vertically */
+  }
+  
+
+  /* technical skills */
+  .technical-skills {
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full height for the section */
+    margin-bottom: 0;
+  }
+  
+  .skills-content {
+    display: flex; /* Use flexbox for content layout */
+    width: 100%; /* Full width of the technical skills section */
+  }
+  
+  .js-skills {
+    width: 50%; /* Left half for Full Stack JavaScript skills */
+    background-color: white; /* Black background */
+    color: black; /* White text color */
+    padding: 40px 20px; /* Padding for top/bottom and left/right */
+    display: flex; /* Use flexbox for text layout */
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center content vertically */
+  }
+  
+  .bug-bounty-skills {
+    width: 50%; /* Right half for Bug Bounty Hunter skills */
+    background-color: black; /* White background */
+    color: white; /* Black text color */
+    padding: 40px 20px; /* Padding for top/bottom and left/right */
+    display: flex; /* Use flexbox for text layout */
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center content vertically */
+  }
+  
+  h2 {
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+  }
+  
+  ul li i {
+    font-size: 24px; /* Adjust icon size */
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+  }
+  
+  ul li {
+    display: flex;
+    align-items: center; /* Align icons and text vertically */
+    margin-bottom: 15px; /* Space between list items */
+  }
+
+  
+  /* Projects */
+  .projects h2 {
+    background: linear-gradient(to right, black 50.1%, white 50%);
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    padding: 0; /* Reduce padding, you can adjust this value as needed */
+    margin: 0; /* Remove margin */
+    position: relative;
+    z-index: 1;
+  }
+
+  .projects h2 span {
+    color: white;
+  }
+
+  .projects {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .projects-content {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  
+  .js-projects, .bug-bounty-projects {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .js-projects {
+    background-color: black;
+    color: white;
+  }
+  
+  .bug-bounty-projects {
+    background-color: white;
+    color: black;
+  }
+  
+  .project-carousel {
+    display: flex;
+    overflow: hidden; /* Hide overflow */
+    width: 80%;
+  }
+  
+  .project-card {
+    min-width: 100%; /* Each card takes full width */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .project-link {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .project-link:hover {
+    text-decoration: underline;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  /* Contact */
+  .contact {
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  .contact h2 {
+    background: linear-gradient(to right, black 50.1%, white 50%);
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    padding: 0; /* Reduce padding, you can adjust this value as needed */
+    margin: 0; /* Remove margin */
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact h2 span {
+    color: white;
+  }
+  
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center the content */
+  }
+  
+  .contact-info {
+    width: 50%; /* Adjust width as necessary */
+    background-color: white;
+    color: black;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .contact-form {
+    background-color: black; /* Black background for right side */
+    color: white;
+    width: 50%; /* Takes half the width */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in width */
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin: 10px 0 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    padding: 10px;
+    background-color: white; /* Or any color you prefer */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: black; /* Darken on hover */
+    color: white;
+  }
+  
+  .contact-info a {
+    text-decoration: none;
+  }
+
+  .contact-info i {
+    font-size: 49px;
+    color: black;
+    padding-right: 10px;
+  }
