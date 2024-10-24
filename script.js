@@ -45,3 +45,13 @@ document.addEventListener("DOMContentLoaded", function() {
   initCarousel('js-carousel');
   initCarousel('bug-carousel');
 });
+
+
+// navbar toggle
+  const toggleButton = document.querySelector('.navbar-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+

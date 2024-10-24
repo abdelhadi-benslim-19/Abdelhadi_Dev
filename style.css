@@ -16,6 +16,12 @@
     margin: 0 auto; /* Center the content */
     width: 100%; /* Full width */
   }
+
+  .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
   
   .nav-links {
     list-style: none; /* Remove default list styling */
